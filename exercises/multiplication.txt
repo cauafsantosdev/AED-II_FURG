@@ -1,0 +1,32 @@
+- Multiplication Algorithm
+
+Input: Two strings `a` and `b`, representing integer numbers.
+Output: An integer result of the multiplication of `a` and `b`.
+
+
+Function multiplication(a, b):
+   int total = 0
+   int shift_a = 1
+
+   For i = length(a) - 1 to 0 do:
+      int mid = 0
+      int shift_b = 1
+
+      For j = length(b) - 1 to 0 do:
+         mid = mid + (integer value of a[i] * shift_a) * (integer value of b[j] * shift_b)
+         shift_b = shift_b * 10
+
+      total = total + mid
+      shift_a = shift_a * 10
+
+   Return total
+
+Main:
+   Print "Enter the first number: "
+   Read a
+   Print "Enter the second number: "
+   Read b
+
+   result = multiplication(a, b)
+
+   Print result
