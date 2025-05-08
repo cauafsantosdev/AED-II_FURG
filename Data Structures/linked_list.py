@@ -71,6 +71,25 @@ class LinkedList:
                 else:
                     element = element.next
         return None
+    
+    def remove(self, pos: int):
+        if pos + 1 <= self.length and pos >= 0:
+            if pos == 0:
+                if self.length == 1:
+                    self.end = None
+                self.start = self.start.next
+            else:
+                aux = self.start
+
+                for _ in range(pos - 1):
+                    aux = aux.next
+
+                aux.next = aux.next.next
+
+                if pos == self.length - 1:
+                    self.end = aux
+
+            self.length -= 1
 
 
 my_list = LinkedList()
@@ -80,5 +99,6 @@ my_list.insert(0, 10)
 my_list.insert(3, 90)
 my_list.insert(1, 70)
 my_list.print()
-print(my_list.get_value(19))
-print(my_list.search(70))
+my_list.remove(1)
+print()
+my_list.print()
