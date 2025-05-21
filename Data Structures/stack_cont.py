@@ -109,7 +109,6 @@ print()
 print(stack3.compare(stack4))
 print()
 
-
 stack4.reverse()
 stack4.print()
 print()
