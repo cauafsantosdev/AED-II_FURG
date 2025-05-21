@@ -85,19 +85,16 @@ class LinkedStack:
             self.remove()
 
 stack = LinkedStack()
+stack.insert(0)
 stack.insert(1)
 stack.insert(2)
 stack.insert(3)
 stack.insert(4)
 stack.insert(5)
-stack.insert(6)
 stack.print()
 print()
-stack.reverse()
-stack.print()
 
-
-'''stack2 = LinkedStack()
+stack2 = LinkedStack()
 stack2.insert(0)
 stack2.insert(1)
 stack2.insert(2)
@@ -121,4 +118,20 @@ stack3.print()
 print()
 
 print(stack.compare(stack3))
-print()'''
+print()
+
+stack3.reverse()
+stack3.print()
+print()
+
+stack4 = LinkedStack()
+stack4.insert(8)
+stack4.insert(1)
+stack4.insert(2)
+stack4.insert(4)
+stack4.insert(10)
+stack4.insert(5)
+stack4.insert(6)
+stack4.print()
+print()
+print(stack4.smallest())
