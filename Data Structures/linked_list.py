@@ -91,6 +91,32 @@ class LinkedList:
 
             self.length -= 1
 
+    def destroy(self):
+        aux = self.start
+
+        while aux != None:
+            next_node = aux.next
+            aux.next = None
+            aux = next_node
+            
+        self.start = None
+        self.start = None
+
+    def reverse(self):
+        aux = self.start
+        vector = []
+
+        while aux.next != None:
+            vector.append(aux.value)
+            aux = aux.next
+
+        vector.append(aux.value)
+        
+        self.destroy()
+
+        for i, v in enumerate(reversed(vector)):
+            self.insert(i, v)
+
 
 my_list = LinkedList()
 my_list.insert(1, 40)
@@ -99,6 +125,6 @@ my_list.insert(0, 10)
 my_list.insert(3, 90)
 my_list.insert(1, 70)
 my_list.print()
-my_list.remove(1)
+my_list.reverse()
 print()
 my_list.print()
